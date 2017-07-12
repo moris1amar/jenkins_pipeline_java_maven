@@ -19,7 +19,7 @@ node {
    
    
       // use the id of the globally configured maven instance
-      def mvnTool = tool 'Maven_3_3_9'
+      def mvnTool = tool 'LocalMAVEN'
 
       // execute maven
       sh "${mvnTool}/bin/mvn clean install"

@@ -16,8 +16,16 @@ node {
       //sh "${mvnHome}/bin/mvn -Dmaven.test.failure.ignore clean package"
    
       sh 'echo Hello'
+   
+   
+      // use the id of the globally configured maven instance
+      def mvnTool = tool 'Maven_3_3_9'
+
+      // execute maven
+      sh "${mvnTool}/bin/mvn clean install"
+   
       // Run the maven build
-      sh "mvn clean install"
+      //sh "mvn clean install"
   
     ///  sh 'mvn -v'
       ///sh "mvn -Dmaven.test.failure.ignore clean package"

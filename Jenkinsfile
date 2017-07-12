@@ -2,6 +2,7 @@ node {
    // Mark the code checkout 'stage'....
    stage 'Checkout'
    sh 'whoami'
+   sh 'pwd'
    ///git url: 'https://github.com/TTFHW/jenkins_pipeline_java_maven.git'
 
    // Get the maven tool.

@@ -25,7 +25,7 @@ node {
       sh "${mvnTool}/bin/mvn -v"
       sh "${mvnTool}/bin/mvn clean install"
       sh "${mvnTool}/bin/mvn -Dmaven.test.failure.ignore clean package"
-      step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml']
+      step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])
    
       // Run the maven build
       //sh "mvn clean install"
